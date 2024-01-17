@@ -12,7 +12,7 @@ function generateArt() {
   for (let i = 0; i < 500; i++) {
     let x = random(width);
     let y = random(height);
-    let size = random(50, 50);
+    let size = random(40, 40);
     let col = color(random(255), random(255), random(255), 100);
 
     drawRandomShape(x, y, size, col);
