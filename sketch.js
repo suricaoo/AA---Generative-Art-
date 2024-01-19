@@ -1,6 +1,5 @@
 function setup() {
   createCanvas(400, 400);
-  noLoop();
 }
 
 function draw() {
@@ -12,11 +11,9 @@ function draw() {
 }
 
 function createGradientBackground() {
-  // Define two colors for the gradient
   let color1 = color(20, 20, 20);
   let color2 = color(100, 125, 200);
 
-  // Draw a gradient background
   for (let i = 0; i <= height; i++) {
     let inter = map(i, 0, height, 0, 1);
     let c = lerpColor(color1, color2, inter);
@@ -30,7 +27,7 @@ function generateArt() {
     let x = random(width);
     let y = random(height);
     let size = random(40, 80);
-    let col = color(random(255), random(255), random(255), 50); // Lower alpha for stronger blending
+    let col = color(random(255), random(255), random(255), 50);
 
     drawRandomShape(x, y, size, col);
   }
@@ -51,4 +48,9 @@ function drawRandomShape(x, y, size, col) {
     let endAngle = startAngle + random(HALF_PI, TWO_PI);
     arc(x, y, size, size, startAngle, endAngle);
   }
+}
+
+function setup() {
+  createCanvas(400, 400);
+  frameRate(1); 
 }
