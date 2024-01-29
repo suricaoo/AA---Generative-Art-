@@ -11,7 +11,7 @@ function draw() {
 }
 
 function createGradientBackground() {
-  let color1 = color(20, 20, 20);
+  let color1 = color(20,20,20);
   let color2 = color(100, 125, 200);
 
   for (let i = 0; i <= height; i++) {
@@ -27,8 +27,8 @@ function generateArt() {
     let x = random(width);
     let y = random(height);
     let size = random(40, 80);
-    //reduce white spaces created by blending high rgb values
-    let col = color(random(100), random(80), random(255), 50);
+    //reduce white spaces created from blending high rgb values
+    let col = color(random(130), 0 , random(100), 50);
 
     drawRandomShape(x, y, size, col);
   }
