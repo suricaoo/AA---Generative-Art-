@@ -27,7 +27,8 @@ function generateArt() {
     let x = random(width);
     let y = random(height);
     let size = random(40, 80);
-    let col = color(random(255), random(255), random(255), 50);
+    //reduce white spaces created by blending high rgb values
+    let col = color(random(100), random(80), random(255), 50);
 
     drawRandomShape(x, y, size, col);
   }
@@ -35,7 +36,7 @@ function generateArt() {
 
 function drawRandomShape(x, y, size, col) {
   fill(col);
-  noStroke();
+  noStroke()
   let choice = floor(random(3));
 
   if (choice === 0) {
